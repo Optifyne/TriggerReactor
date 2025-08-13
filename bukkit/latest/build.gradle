@@ -35,7 +35,7 @@ task writePluginYml {
 
     map.put("name", id)
     map.put("main", "io.github.wysohn.triggerreactor.bukkit.main.TriggerReactor")
-    map.put("version", project.version)
+    map.put("version", "3.5.0.6-Beta")
     map.put("author", project.ext.author)
     map.put("authors", project.ext.authors)
     map.put("softdepend", [
@@ -63,6 +63,11 @@ task writePluginYml {
             put(id.toLowerCase() + ".admin", new HashMap<String, Object>() {
                 {
                     put("description", "Grant admin permission")
+                }
+            })
+            put(id.toLowerCase() + ".see.exceptions", new HashMap<String, Object>() {
+                {
+                    put("description", "See exceptions")
                 }
             })
         }
